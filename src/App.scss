@@ -1,8 +1,9 @@
 @use './UI/button/MyButton.module.scss';
+@use './scss/CreatePost.scss';
+
 * {
     margin: 0;
-    padding: 0;
-    
+    padding: 0;   
 }
 
 .App{
@@ -14,9 +15,9 @@
         width: 100%;
         height: 80px;
         background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(208,230,255,1) 100%);
+        background: radial-gradient(circle, rgb(186, 171, 250) 0%, rgb(187, 209, 235) 100%);
         display: flex;
-        justify-content: center;
+      
         align-items: center;
         color: white;
         text-decoration: none;
@@ -28,7 +29,10 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(208,230,255,1) 
         margin: 10px;
         font-size: 25px;
       }
-
+.nav button{
+  margin-left: auto;
+  margin-right: 30px;
+}
 
 
 
