@@ -32,7 +32,7 @@ const Home = (isAuth) => {
            <div className='postHeader'>
                <div className='title'><h1>{post.title}</h1></div>
          
-               <div className='deletePost'> {isAuth && post.author.id===auth.currentUser.uid &&  <MyButton className='deletePost_button' onClick={()=>{deletePost(post.id)}}>&#128500;</MyButton>} </div>
+               <div className='deletePost'> {isAuth && post.author.id===auth.currentUser.uid &&  <MyButton className='deletePost_button' onClick={()=>{deletePost(post.id)}}>x</MyButton>} </div>
             
                </div>
 
