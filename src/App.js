@@ -11,6 +11,7 @@ import { auth } from './firebase-config';
 function App() {
 
   const [isAuth,setIsAuth]=useState(localStorage.getItem('isAuth'));
+  
 
   const signUserOut=()=>{
     signOut(auth).then(()=>{

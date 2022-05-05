@@ -26,13 +26,15 @@ const Home = (isAuth) => {
         await deleteDoc(postDoc)
     }
 
+    
+
     return (
         <div className='homePage'>
            {postLists.map((post)=>{return <div className='post'> 
            <div className='postHeader'>
                <div className='title'><h1>{post.title}</h1></div>
          
-               <div className='deletePost'> {isAuth && post.author.id===auth.currentUser.uid &&  <MyButton className='deletePost_button' onClick={()=>{deletePost(post.id)}}>x</MyButton>} </div>
+              {  localStorage.getItem('isAuth')==='true'? <div className='deletePost'> { auth.currentUser.uid===post.author.id &&    <MyButton className='deletePost_button' onClick={()=>{deletePost(post.id)}}>x</MyButton>} </div>:<div></div>}
             
                </div>
 
